@@ -1,0 +1,7 @@
+<h1>イベント：{{ event.name }} への投稿</h1>
+
+<form method="post" action="{% url 'proto1:comment_register' event_id=event.id %}">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="投稿する">
+</form>

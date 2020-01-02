@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-3">
+        <p>イベント名</p>
+    </div>
+    <div class="col-9">
+        <p>{{ event.name }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>種類</p>
+    </div>
+    <div class="col-9">
+        <p>{{ event.get_type_display }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>日時</p>
+    </div>
+    <div class="col-9">
+        <p>{{ event.date|date:"Y/m/d G:i:s" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>場所</p>
+    </div>
+    <div class="col-9">
+        <p>{{ event.place }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>詳細</p>
+    </div>
+    <div class="col-9">
+        <p>{{ event.memo|linebreaksbr }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p>登録日</p>
+    </div>
+    <div class="col-9">
+        <p>{{ event.created_at|date:"Y/m/d G:i:s" }}</p>
+    </div>
+</div>
